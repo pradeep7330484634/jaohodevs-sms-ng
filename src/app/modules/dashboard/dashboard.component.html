@@ -1,0 +1,105 @@
+<div class="sms-container" [class.sms-is-mobile]="mobileQuery.matches">
+  <mat-toolbar color="primary" class="sms-toolbar">
+    <button mat-icon-button (click)="snav.toggle()">
+      <mat-icon matTooltip="click menu" matTooltipPosition="below"
+        >menu</mat-icon
+      >
+    </button>
+    <img
+      class="p-image-logo"
+      src="../../../assets/logos/logo.png"
+      alt="sms-logo"
+    />
+    <!-- <button mat-raised-button (click)="darkTheme()">Dark theme</button> -->
+    <div>
+      <mat-toolbar>
+        <mat-toolbar-row style="padding: 0px 0px 36px 0px;">
+          <div>
+            <button
+              mat-button
+              [matMenuTriggerFor]="menu1"
+              style="position: absolute; right: 0"
+            >
+              <mat-icon matBadge="15" matBadgeColor="warn"
+                >account_circle</mat-icon
+              >
+            </button>
+            <mat-menu #menu1="matMenu">
+              <button mat-menu-item>
+                <mat-icon matBadge="15" matBadgeColor="warn">
+                  account_box</mat-icon
+                >
+                Profile
+              </button>
+              <button mat-menu-item>
+                <mat-icon> settings </mat-icon>
+                Settings
+              </button>
+              <button mat-menu-item>
+                <mat-icon> notification_important</mat-icon>
+                Notifications
+              </button>
+              <button mat-menu-item>
+                <mat-icon>payment</mat-icon>
+                Payment
+              </button>
+              <button mat-menu-item (click)="logout()">
+                <mat-icon>power_settings_new </mat-icon> Logout
+              </button>
+            </mat-menu>
+          </div>
+        </mat-toolbar-row>
+      </mat-toolbar>
+    </div>
+    <!-- <div>
+      <app-dashboard-header></app-dashboard-header>
+    </div> -->
+  </mat-toolbar>
+  <mat-sidenav-container
+    class="sms-sidenav-container"
+    [style.marginTop.px]="mobileQuery.matches ? 56 : 0"
+  >
+    <mat-sidenav
+      #snav
+      [mode]="mobileQuery.matches ? 'over' : 'side'"
+      [fixedInViewport]="mobileQuery.matches"
+      fixedTopGap="56"
+    >
+      <div class="side-nav-list-section">
+        <mat-accordion>
+          <div *ngFor="let list of menuListItems">
+              <!-- <mat-expansion-panel *authRoleCheck="list.roles"> -->
+            <mat-expansion-panel class="p-expansion-panel">
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  {{ list.name }}
+                </mat-panel-title>
+              </mat-expansion-panel-header>
+              <mat-nav-list *ngFor="let items of list.fields">
+                <a mat-list-item routerLink="/{{ items.routerLink }}">{{
+                  items.name
+                }}</a>
+                <mat-divider></mat-divider>
+              </mat-nav-list>
+              <!-- <mat-list-item *ngFor="let items of list.fields" routerLink="/{{items.routerLink}}">
+                {{items.name}}
+              </mat-list-item> -->
+            </mat-expansion-panel>
+          </div>
+        </mat-accordion>
+      </div>
+  
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <!-- <div class="setting-icon-section" (click)="settingFlagToggle()" >
+          <mat-icon  matTooltip="Click settings"><i class="fas fa-cog"></i></mat-icon>
+      </div>
+      <div *ngIf="settingFlag" class="setting-icon-section">
+        <mat-card>
+          <h3>Settings page</h3>
+        </mat-card>
+      </div> -->
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>

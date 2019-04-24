@@ -1,0 +1,31 @@
+/* Add Global custome SCSS */
+@import '~@angular/material/theming';
+@include mat-core();
+// font-family  - pradeep
+// $custom-typography: mat-typography-config(
+//  $font-family: 'Roboto, Helvetica Neue,sans-serif',
+//   $headline: mat-typography-level(352px, 48px, 700),
+//   $body-1: mat-typography-level(165px, 254px, 5500)
+// );
+// Override typography for all Angular Material, including mat-base-typography and all components.
+// @include angular-material-typography($custom-typography);
+// Define the default theme (same as the example above).
+$sms-app-primary: mat-palette($mat-indigo);
+$sms-app-accent:  mat-palette($mat-pink, A200, A100, A400);
+$sms-app-theme:   mat-dark-theme($sms-app-primary, $sms-app-accent);
+
+// Include the default theme styles.
+// @include angular-material-theme($sms-app-theme);
+
+// Define an alternate dark theme.
+$dark-primary: mat-palette($mat-blue);
+$dark-accent:  mat-palette($mat-red, A200, A100, A400);
+$dark-warn:    mat-palette($mat-deep-orange);
+$dark-theme:   mat-dark-theme($dark-primary, $dark-accent, $dark-warn);
+
+// Include the alternative theme styles inside of a block with a CSS class. You can make this
+// CSS class whatever you want. In this example, any component inside of an element with
+// `.unicorn-dark-theme` will be affected by this alternate dark theme instead of the default theme.
+.sms-material-dark-theme {
+  @include angular-material-theme($dark-theme);
+}

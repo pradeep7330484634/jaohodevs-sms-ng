@@ -1,0 +1,9 @@
+<div *ngIf="errorMessage">
+    {{errorMessage}}
+</div>
+<div *ngFor="let value of result">
+    <b>Title:</b> <p>{{value?.title}}</p>
+    <b>Header:</b> <p>{{value?.header}}</p>
+    <b>body:</b> <p>{{value?.body}}</p>
+    <b>description:</b> <p>{{value?.description}}</p>
+</div>

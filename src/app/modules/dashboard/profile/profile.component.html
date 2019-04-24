@@ -1,0 +1,116 @@
+<section class="profile-section">
+  <div class="container-fluid">
+    <div class="cards-section">
+      <div class="row">
+        <div class="col-sm-3" *ngFor="let value of cardsSection">
+          <mat-card [ngStyle]="{'background-color': value.color}">
+            <div class="row">
+              <mat-icon class="col-sm-2 icons-size">
+                <i [ngClass]="value.matIcon"></i>
+              </mat-icon>
+              <h3 class="col-sm-10">{{value.count}}</h3>
+            </div>
+            <h3 class="text-right">{{value.text}}</h3>
+          </mat-card>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <div class="row">
+    <div class="col-sm-6">
+      <mat-tab-group>
+        <mat-tab>
+          <ng-template mat-tab-label>
+            <mat-icon class="example-tab-icon">thumb_up</mat-icon>
+            Activity
+          </ng-template>
+          Angular is a platform and framework for building client applications in HTML and TypeScript. Angular is
+          written
+          in TypeScript. It implements core and optional functionality as a set of TypeScript libraries that you import
+          into your apps.
+
+          The basic building blocks of an Angular application are NgModules, which provide a compilation context for
+          components. NgModules collect related code into functional sets; an Angular app is defined by a set of
+          NgModules. An app always has at least a root module that enables bootstrapping, and typically has many more
+          feature modules.
+        </mat-tab>
+
+        <mat-tab>
+          <ng-template mat-tab-label>
+            <mat-icon class="example-tab-icon">thumb_up</mat-icon>
+            Shedule
+          </ng-template>
+          Angular NgModules differ from and complement JavaScript (ES2015) modules. An NgModule declares a compilation
+          context for a set of components that is dedicated to an application domain, a workflow, or a closely related
+          set of capabilities. An NgModule can associate its components with related code, such as services, to form
+          functional units.
+
+          Every Angular app has a root module, conventionally named AppModule, which provides the bootstrap mechanism
+          that launches the application. An app typically contains many functional modules.
+        </mat-tab>
+
+        <mat-tab>
+          <ng-template mat-tab-label>
+            <mat-icon class="example-tab-icon">thumb_up</mat-icon>
+            Fee reports
+          </ng-template>
+          Not content
+        </mat-tab>
+      </mat-tab-group>
+    </div>
+    <div class="image-card-section col-sm-6">
+      <div class="row">
+        <mat-card class="example-card col-sm-6">
+          <mat-card-header>
+            <div mat-card-avatar class="example-header-image"></div>
+            <mat-card-title>Pradeep muniganti</mat-card-title>
+            <mat-card-subtitle>Books Notification</mat-card-subtitle>
+          </mat-card-header>
+          <img mat-card-image src="https://rukminim1.flixcart.com/image/612/612/j6qs9e80/book/6/2/7/indian-history-original-imaew2qt5dehgs8d.jpeg?q=70"
+            alt="Photo of a Shiba Inu">
+          <mat-card-content>
+            <p>
+              Angular is a platform and framework for building client applications in HTML and TypeScript. Angular is
+              written in TypeScript. It implements core and optional functionality as a set of TypeScript libraries
+              that
+              you import into your apps.
+              The basic building blocks of an Angular application are NgModules, which provide a compilation context
+              for
+              components. NgModules collect related code into functional sets; an Angular app is defined by a set of
+              NgModules. An app always has at least a root module that enables bootstrapping, and typically has many
+              more
+              feature modules.
+
+
+            </p>
+          </mat-card-content>
+          <mat-card-actions>
+            <button mat-button>LIKE</button>
+            <button mat-button>SHARE</button>
+          </mat-card-actions>
+        </mat-card>
+        <mat-card class="example-card col-sm-6">
+          <mat-card-header>
+            <div mat-card-avatar class="example-header-image"></div>
+            <mat-card-title>Shiba Inu</mat-card-title>
+            <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+          </mat-card-header>
+          <img mat-card-image src="https://rukminim1.flixcart.com/image/612/612/book/4/6/6/wings-of-fire-an-autobiography-original-imaer2yzjmz5tzuj.jpeg?q=70"
+            alt="Photo of a Shiba Inu">
+          <mat-card-content>
+            <p>
+              The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+              A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+              bred for hunting.
+            </p>
+          </mat-card-content>
+          <mat-card-actions>
+            <button mat-button>LIKE</button>
+            <button mat-button>SHARE</button>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</section>

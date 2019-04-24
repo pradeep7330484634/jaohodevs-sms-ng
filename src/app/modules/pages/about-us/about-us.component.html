@@ -1,0 +1,27 @@
+<!--
+  <div class="alert-alert-danger" *ngIf="errorMessage">{{ errorMessage }}</div>
+  <div *ngFor="let value of result">
+    <b>Title:</b>
+    <p>{{ value.title }}</p>
+    <b>header:</b>
+    <p>{{ value.header }}</p>
+    <b>description:</b>
+    <p>{{ value.description }}</p>
+    <b>Body:</b>
+    <p>{{ value?.body }}</p>
+  </div>
+-->
+
+<br /><br />
+<!-- <h4>Select Language:</h4> -->
+<mat-form-field>
+  <mat-select placeholder="Select Language:">
+    <mat-option
+      *ngFor="let list of languageList"
+      (click)="selectLanguage(list.value)"
+      [value]="list.value"
+    >
+      {{ list.name }}
+    </mat-option>
+  </mat-select>
+</mat-form-field>

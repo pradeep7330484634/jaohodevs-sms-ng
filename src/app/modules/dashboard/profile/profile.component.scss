@@ -1,0 +1,47 @@
+
+.profile-section {
+  span {
+    // padding: 106px;
+    font-size: 22px;
+  }
+  .icons-size {
+    font-size: 36px;
+  }
+.cards-section {
+  .mat-card {
+    padding: 49px;
+    margin-top: 19px;
+    margin-bottom: 12px;
+    text-align: center;   
+    color: #fff; 
+  }
+  // .orange {
+  //   background-color: #e39f24;
+  //   }
+  //   .blue {
+  //     background-color: blue;
+  //     }
+  //   .pink {
+  //       background-color: #f06292;
+  //   }
+  //   .voilet {
+  //     background-color: #9575cd;
+  // }
+}
+ 
+
+//   .mat-tab-group {
+//     // width: 50%;
+// }
+/* mat-card image */
+.image-card-section {
+  // .example-card {
+  //   // max-width: 400px;
+  // }
+  
+  .example-header-image {
+    background-image: url('https://lh3.googleusercontent.com/-5WHzQ_hKLJw/AAAAAAAAAAI/AAAAAAAAAAA/AAN31DVHb-DaDz5zCv3X3I-mS2EAWapOoA/mo/photo.jpg?sz=46');
+    background-size: cover;
+  }
+}
+}

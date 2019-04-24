@@ -1,0 +1,30 @@
+<div >
+  <mat-toolbar >
+        <mat-toolbar-row style="padding: 0px 0px 36px 0px;">
+          <div >
+            <button mat-button [matMenuTriggerFor]="menu1" style="position: absolute; right: 0">
+              <mat-icon matBadge="15" matBadgeColor="warn">account_circle</mat-icon>
+            </button>
+            <mat-menu #menu1="matMenu">
+              <button mat-menu-item>
+                <mat-icon  matBadge="15" matBadgeColor="warn"> account_box</mat-icon>
+                Profile
+              </button>
+              <button mat-menu-item>
+                <mat-icon> settings </mat-icon>
+                Settings
+              </button>
+              <button mat-menu-item><mat-icon> notification_important</mat-icon>
+                Notifications
+              </button>
+              <button mat-menu-item><mat-icon>payment</mat-icon>
+                Payment
+              </button>
+              <button mat-menu-item (click)="logout()"> <mat-icon>power_settings_new </mat-icon> Logout
+              </button>
+            </mat-menu>
+          </div>
+        </mat-toolbar-row>
+      </mat-toolbar>
+    
+</div>

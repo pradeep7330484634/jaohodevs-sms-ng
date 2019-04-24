@@ -1,1 +1,44 @@
 /* You can add global styles to this file, and also import other style files */
+// $fa-font-path: "../node_modules/font-awesome/fonts";
+// @import "../node_modules/font-awesome/scss/font-awesome.scss";
+
+html,
+body {
+  height: 100%;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+}
+// p-variable colors
+$layout-color: linear-gradient(#ffae00, #f91b1b);
+
+// p- form fields
+mat-form-field {
+  width: 100%;
+}
+// p-button
+.mat-fab.mat-primary,
+.mat-flat-button.mat-primary,
+.mat-mini-fab.mat-primary,
+.mat-raised-button.mat-primary {
+  background: $layout-color;
+}
+button {
+  mat-button {
+    background: $layout-color;
+  }
+}
+.p-button {
+  text-align: center;
+  button {
+    width: 100%;
+  }
+}
+
+// p- custom styles
+.p-text-center {
+  text-align: center;
+  color: #fd8607;
+}
+
+

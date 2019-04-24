@@ -3,6 +3,11 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AuthenticationComponent } from './modules/authentication/authentication.component';
+import { SharedModule } from './shared/shared.module';
+import { DashboardComponent } from './modules/dashboard/dashboard.component';
+import { PagesComponent } from './modules/pages/pages.component';
 
 @NgModule({
   declarations: [
@@ -10,7 +15,9 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    SharedModule,
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
