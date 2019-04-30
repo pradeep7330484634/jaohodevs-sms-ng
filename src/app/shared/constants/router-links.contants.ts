@@ -35,7 +35,7 @@ export const ROUTER_LINKS = {
   // superAdminRole : "SA",
 }
 
-// dashboard sidenav list links 
+// Dashboard sidenav list links 
 export const DASHBOARD_SIDENAV_LINKS = [
   {
     name: "Dashboard",
