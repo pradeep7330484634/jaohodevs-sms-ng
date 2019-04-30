@@ -4,7 +4,7 @@ import { MediaMatcher } from '@angular/cdk/layout';
 import { ChangeDetectorRef, OnDestroy } from '@angular/core';
 import { UserRoles } from 'src/app/shared/models/user-roles';
 import { OverlayContainer } from '@angular/cdk/overlay';
-import { ROUTER_LINKS } from 'src/app/shared/constants/router-links.contants';
+import { ROUTER_LINKS, DASHBOARD_SIDENAV_LINKS } from 'src/app/shared/constants/router-links.contants';
 
 @Component({
   selector: 'app-dashboard',
@@ -13,63 +13,7 @@ import { ROUTER_LINKS } from 'src/app/shared/constants/router-links.contants';
 })
 export class DashboardComponent implements OnInit {
   settingFlag: boolean = false;
-  menuListItems: UserRoles[] = [
-    // {
-    //   name: "Dashboard",
-    //   roles: ["SA", "A", "U"],
-    //   fields: [{
-    //     name: "profile",
-    //     routerLink: ROUTER_LINKS.mainDashboardUrl + "/" + ROUTER_LINKS.dashboardUrl + "/" + ROUTER_LINKS.profileUrl
-    //   }, {
-    //     name: "settings",
-    //     routerLink: ROUTER_LINKS.mainDashboardUrl + "/" + ROUTER_LINKS.dashboardUrl + "/" + ROUTER_LINKS.profileUrl
-    //   }
-    //   ]
-    // },
-    // {
-    //   name: "Students",
-    //   roles: ["SA", "A"],
-    //   fields: [{
-    //     name: "Exams",
-    //     routerLink: ROUTER_LINKS.mainDashboardUrl + "/" + ROUTER_LINKS.dashboardUrl + "/" + ROUTER_LINKS.studentUrl
-    //   }, {
-    //     name: "Batches",
-    //     routerLink: ROUTER_LINKS.mainDashboardUrl + "/" + ROUTER_LINKS.dashboardUrl + "/" + ROUTER_LINKS.studentUrl
-    //   }
-    //   ]
-    // },
-    // {
-    //   name: "Reports",
-    //   roles: ["SA"],
-    //   fields: [{
-    //     name: "Basic report",
-    //     routerLink: ROUTER_LINKS.mainDashboardUrl + "/" + ROUTER_LINKS.dashboardUrl + "/" + ROUTER_LINKS.reportUrl
-    //   }, {
-    //     name: "Total report of exams",
-    //     routerLink: ROUTER_LINKS.mainDashboardUrl + "/" + ROUTER_LINKS.dashboardUrl + "/" + ROUTER_LINKS.reportUrl
-    //   },
-    //   ]
-    // },
-    {
-      name: "Forms",
-      roles: [""],
-      fields: [
-        {
-          name: "Home-form",
-          routerLink: "/" + ROUTER_LINKS.dashboard_Link + "/" + ROUTER_LINKS.homeForm_Link
-        },
-        {
-          name: "aboutus-form",
-          routerLink: "/" + ROUTER_LINKS.dashboard_Link + "/" + ROUTER_LINKS.aboutusForm_Link
-        },
-        {
-          name: "contactus-form",
-          routerLink: "/" + ROUTER_LINKS.dashboard_Link + "/" + ROUTER_LINKS.contactusForm_Link
-        }
-      ]
-    },
-    
-  ];
+  menuListItems: UserRoles[] = DASHBOARD_SIDENAV_LINKS;
 
   mobileQuery: MediaQueryList;
   private _mobileQueryListener: () => void;

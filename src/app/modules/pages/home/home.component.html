@@ -1,89 +1,90 @@
 <section class="p-home-section">
-  <!-- <carousel>
-    <slide>
-        <div class="text-center py-5 bg-dark text-white">
-            <h2>First custom content</h2>
-            <div class="lead">
-                <h3>First slide label</h3>
-                <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-            </div>
+  <div class="p-carousel">
+    <carousel>
+      <slide>
+        <img
+          src="../../../../assets/images/background-img1.jpg"
+          alt="first slide"
+          style="display: block; width: 100%;"
+        />
+        <div class="carousel-caption d-none d-md-block">
+          <h3>First slide label</h3>
+          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
         </div>
-    </slide>
-    <slide>
-        <div class="text-center py-5 bg-dark text-white">
-            <h2>Second custom content</h2>
-            <div class="lead">
-                <h3>Second slide label</h3>
-                <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-            </div>
+      </slide>
+      <slide>
+        <img
+          src="../../../../assets/images/background-img2.jpg"
+          alt="second slide"
+          style="display: block; width: 100%;"
+        />
+        <div class="carousel-caption d-none d-md-block">
+          <h3>Second slide label</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </div>
-    </slide>
-    <slide>
-        <div class="text-center py-5 bg-dark text-white">
-            <h2>Third custom content</h2>
-            <div class="lead">
-                <h3>Third slide label</h3>
-                <p>Nulla vitae elit libero, a pharetra augue mollis interdum. </p>
-            </div>
+      </slide>
+      <slide>
+        <img
+          src="../../../../assets/images/background-img3.jpg"
+          alt="third slide"
+          style="display: block; width: 100%;"
+        />
+        <div class="carousel-caption d-none d-md-block">
+          <h3>Third slide label</h3>
+          <p>
+            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+          </p>
         </div>
-    </slide>
-</carousel> -->
-  <div class="row">
-    <div class="col-sm-6">
-      <mat-card>Easy to deploy</mat-card>
-    </div>
-    <div class="col-sm-6">
-      <mat-card>Secure</mat-card>
-    </div>
-    <div class="col-sm-6">
-      <mat-card>Fast </mat-card>
-    </div>
-    <div class="col-sm-6">
-      <mat-card>Robust</mat-card>
-    </div>
+      </slide>
+    </carousel>
   </div>
   <div class="container">
-    <h3>
-      SMS slogan here..
-    </h3>
-  </div>
-  <div *ngIf="errorMessage">
-    {{ errorMessage }}
-  </div>
-  <div>
-    <div *ngFor="let value of result">
-      <b>Tittle:</b>
-      <p>{{ value.tittle }}</p>
-      <b>Header:</b>
-      <p>{{ value.header }}</p>
-      <b>Image:</b>
-      <p>{{ value.image }}</p>
-      <b>Body:</b>
-      <p [innerHTML]="value.body"></p>
+    <div class="row">
+      <div class="col-sm-6">
+        <mat-card>Easy to deploy</mat-card>
+      </div>
+      <div class="col-sm-6">
+        <mat-card>Secure</mat-card>
+      </div>
+      <div class="col-sm-6">
+        <mat-card>Fast </mat-card>
+      </div>
+      <div class="col-sm-6">
+        <mat-card>Robust</mat-card>
+      </div>
     </div>
   </div>
-  <div>
-    <h1>
-      By default, Material will only measure and resize the drawer container in
-      a few key moments (on open, on window resize, on mode change) in order to
-      avoid layout thrashing, however there are cases where this can be
-      problematic. If your app requires for a drawer to change its width while
-      it is open, you can use the autosize option to tell Material to continue
-      measuring it. Note that you should use this option at your own risk,
-      because it could cause performance issues. By default, Material will only
-      measure and resize the drawer container in a few key moments (on open, on
-      window resize, on mode change) in order to avoid layout thrashing, however
-      there are cases where this can be problematic. If your app requires for a
-      drawer to change its width while it is open, you can use the autosize
-      option to tell Material to continue measuring it. Note that you should use
-      this option at your own risk, because it could cause performance issues.
-      By default, Material will only measure and resize the drawer container in
-      a few key moments (on open, on window resize, on mode change) in order to
-      avoid layout thrashing, however there are cases where this can be
-      problematic. If your app requires for a drawer to change its width while
-      it is open, you can use the autosize option to tell Material to continue
-      measuring it. Note that you should use this option at your own risk,
-      because it could cause performance issues.
-    </h1>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-6">
+        <mat-card>
+          <mat-card-title>
+            Easy to deploy
+          </mat-card-title>
+        </mat-card>
+      </div>
+      <div class="col-sm-6">
+        <mat-card>
+          <mat-card-title>
+            Easy to deploy
+          </mat-card-title></mat-card
+        >
+      </div>
+      <div class="col-sm-6">
+        <mat-card>
+          <mat-card-title>
+            Easy to deploy
+          </mat-card-title>
+        </mat-card>
+      </div>
+      <div class="col-sm-6">
+        <mat-card>
+          <mat-card-title>
+            Easy to deploy
+          </mat-card-title></mat-card
+        >
+      </div>
+    </div>
   </div>
+
 </section>

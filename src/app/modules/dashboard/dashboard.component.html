@@ -71,12 +71,12 @@
               <!-- <mat-expansion-panel *authRoleCheck="list.roles"> -->
             <mat-expansion-panel class="p-expansion-panel">
               <mat-expansion-panel-header>
-                <mat-panel-title>
+                <mat-panel-title class="p-text-color">
                   {{ list.name }}
                 </mat-panel-title>
               </mat-expansion-panel-header>
               <mat-nav-list *ngFor="let items of list.fields">
-                <a mat-list-item routerLink="/{{ items.routerLink }}">{{
+                <a mat-list-item  class="p-text-color" routerLink="/{{ items.routerLink }}">{{
                   items.name
                 }}</a>
                 <mat-divider></mat-divider>

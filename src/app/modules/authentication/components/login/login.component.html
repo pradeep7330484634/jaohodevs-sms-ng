@@ -18,9 +18,9 @@
               formControlName="email"
             />
             <mat-icon matSuffix>contact_mail</mat-icon>
-            <!-- <div>
-              {{getError('email')}}
-            </div> -->
+            <!-- <mat-error *ngIf="form.get('email').errors.required">
+              Email is required
+            </mat-error> -->
           </mat-form-field>
         </div>
         <div>

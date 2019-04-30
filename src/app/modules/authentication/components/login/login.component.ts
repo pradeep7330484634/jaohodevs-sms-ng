@@ -26,7 +26,7 @@ export class LoginComponent implements OnInit {
   // loing form submit
   submitForm() {
     if (this.form.valid) {
-      this.router.navigate(["/" + ROUTER_LINKS.dashboard_Link + "/" + ROUTER_LINKS.homeForm_Link]);
+      this.router.navigate(["/" + ROUTER_LINKS.dashboard_Link + "/" + ROUTER_LINKS.dashboardHome]);
     } else if (this.form.invalid) {
       console.log(this.form.value);
     }

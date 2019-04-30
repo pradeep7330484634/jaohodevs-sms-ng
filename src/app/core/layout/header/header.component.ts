@@ -1,5 +1,5 @@
 import {MediaMatcher} from '@angular/cdk/layout';
-import {ChangeDetectorRef, Component, OnDestroy, OnInit} from '@angular/core';
+import {ChangeDetectorRef, Component, OnDestroy, OnInit, HostListener} from '@angular/core';
 import { ROUTER_LINKS } from 'src/app/shared/constants/router-links.contants';
 
 @Component({
@@ -8,7 +8,6 @@ import { ROUTER_LINKS } from 'src/app/shared/constants/router-links.contants';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  // viewConstant = ViewConstants;
   code: any;
   headerMenuList = [
     { name: "Home", routerLink: "/" + this.code + "/" + ROUTER_LINKS.homeForm_Link },
@@ -19,23 +18,10 @@ export class HeaderComponent implements OnInit {
     { name: "Login", routerLink: "/" + this.code + "/" + ROUTER_LINKS.login_Link },
     { name: "Signup", routerLink: "/" + this.code + "/" + ROUTER_LINKS.signup_Link }
   ];
-  // constructor(private service: ProfileService) {  }
+
   ngOnInit() {
-    // this.code = this.service.getProfileId();
   }
-  mobileQuery: MediaQueryList;
-
-  private _mobileQueryListener: () => void;
-
-  constructor(changeDetectorRef: ChangeDetectorRef, media: MediaMatcher) {
-    this.mobileQuery = media.matchMedia('(max-width: 600px)');
-    this._mobileQueryListener = () => changeDetectorRef.detectChanges();
-    this.mobileQuery.addListener(this._mobileQueryListener);
+  @HostListener('window:scroll', ['$event']) onscroll($event) {
+    console.log($event);
   }
-
-  ngOnDestroy(): void {
-    this.mobileQuery.removeListener(this._mobileQueryListener);
-  }
-
-
 }

@@ -45,3 +45,16 @@
      `<body>` to be our scrolling element for mobile layouts. */
   flex: 1 0 auto;
 }
+.side-nav-list-section {
+  .mat-nav-list .mat-list-item {
+    color: #fff;
+  }
+  .mat-action-list .mat-list-item:focus,
+  .mat-action-list .mat-list-item:hover,
+  .mat-list-option:focus,
+  .mat-list-option:hover,
+  .mat-nav-list .mat-list-item:focus,
+  .mat-nav-list .mat-list-item:hover {
+    background: rgb(226, 26, 26);
+  }
+}

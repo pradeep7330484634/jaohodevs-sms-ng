@@ -1,18 +1,18 @@
-// .footer-section {
-//     height: 74px;
-//     background: #3f51b5;
-//     position: absolute;
-//     bottom: 0;
-//     width: 100%;
-//     z-index: 10;
-// }
-
+// custom inheritance Scss classes
+%p-flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+// mixins for resuability 
+@mixin customeColors($color, $bg-color) {
+  color: $color;
+  background-color: $bg-color;
+}
 .footer-bar-section {
-  position: fixed;
   bottom: 0;
   width: 100%;
-  .bg-primary {
-    background-color: #3f51b5 !important;
-    color: #fff;
-  }
+  height: 56px;
+  @include customeColors(#fff, #3f51b5);
+  @extend %p-flex-center;
 }
