@@ -1,4 +1,4 @@
-# JaihodevsJobs & school project
+# JaihodevsJobs & school project to Define digital solution
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.2.0.
 
